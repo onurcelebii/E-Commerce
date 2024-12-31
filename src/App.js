@@ -13,7 +13,7 @@ import CartPage from "./pages/CartPage";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import CategoryPage from "./pages/CategoryPage"; // Yeni CategoryPage'i import ediyoruz
-import PaymentPage from "./pages/PaymentPage"; // Yeni CategoryPage'i import ediyoruz
+import PaymentPage from "./pages/PaymentPage";
 
 function App() {
   const navigate = useNavigate();
