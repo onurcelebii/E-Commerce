@@ -1,4 +1,3 @@
-// pages/ProductPage.js
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useProducts from "../hooks/useProducts";
@@ -16,12 +15,12 @@ function ProductPage() {
 
   useEffect(() => {
     if (!loading && products) {
-      setProduct(products[0]); // Tek bir ürün geliyor, dizi olarak alındığı için ilk elemanı alıyoruz
+      setProduct(products[0]);
     }
   }, [products, loading]);
 
   if (loading || !product) {
-    return <Loading />; // Yükleniyor durumu
+    return <Loading />;
   }
 
   return (
@@ -39,10 +38,6 @@ function ProductPage() {
           />
         </div>
       </div>
-      {/* 
-      {showAlert && (
-        <AlertMessage message="Product added to cart successfully!" />
-      )} */}
     </div>
   );
 }

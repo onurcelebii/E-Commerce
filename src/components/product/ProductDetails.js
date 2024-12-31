@@ -6,8 +6,8 @@ const ProductDetails = ({ title, rating, description, price, onAddToCart }) => {
   const [showAlert, setShowAlert] = useState(false);
 
   const handleAddToCart = () => {
-    onAddToCart(); // Sepete ekleme işlemi
-    setShowAlert(true); // Mesajı göster
+    onAddToCart();
+    setShowAlert(true);
   };
 
   return (

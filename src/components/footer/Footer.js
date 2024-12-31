@@ -7,7 +7,6 @@ function Footer() {
     <footer className="bg-dark text-white mt-5">
       <div className="container py-5">
         <div className="row">
-          {/* Hakkımızda */}
           <div className="col-md-3">
             <h5>About Us</h5>
             <p>
@@ -15,7 +14,6 @@ function Footer() {
               most affordable prices. You can contact us for more information.
             </p>
           </div>
-          {/* Kategoriler */}
           <div className="col-md-3">
             <h5>Categories</h5>
             <ul className="list-unstyled">
@@ -53,7 +51,6 @@ function Footer() {
               </li>
             </ul>
           </div>
-          {/* İletişim */}
           <div className="col-md-3">
             <h5>Communication</h5>
             <p>
@@ -62,7 +59,6 @@ function Footer() {
               Email: info@eticaret.com
             </p>
           </div>
-          {/* Sosyal Medya */}
           <div className="col-md-3">
             <h5>Follow Us</h5>
             <div className="d-flex gap-3">

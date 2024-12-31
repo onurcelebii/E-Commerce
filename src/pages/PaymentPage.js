@@ -9,7 +9,7 @@ import {
   handleCardNumberChange,
   handleExpiryDateChange,
   handleCvvChange,
-} from "../utils/utils"; // Fonksiyonlar utils dosyasından import ediliyor
+} from "../utils/utils";
 import "../styles/PaymentPage.css";
 
 function PaymentPage() {

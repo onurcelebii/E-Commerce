@@ -12,14 +12,13 @@ import ProductPage from "./pages/ProductPage";
 import CartPage from "./pages/CartPage";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-import CategoryPage from "./pages/CategoryPage"; // Yeni CategoryPage'i import ediyoruz
+import CategoryPage from "./pages/CategoryPage";
 import PaymentPage from "./pages/PaymentPage";
 
 function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Yönlendirme işlemi, /'den /home'a yönlendir
     if (window.location.pathname === "/") {
       navigate("/home");
     }

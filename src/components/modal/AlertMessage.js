@@ -4,12 +4,11 @@ const AlertMessage = ({ message }) => {
   const [show, setShow] = useState(true);
 
   useEffect(() => {
-    // Mesajı 3 saniye sonra kaybetmek için timeout ekliyoruz
     const timer = setTimeout(() => {
       setShow(false);
-    }, 2000); // 3 saniye sonra kaybolacak
+    }, 2000);
 
-    return () => clearTimeout(timer); // Timer temizliği
+    return () => clearTimeout(timer);
   }, []);
 
   return (

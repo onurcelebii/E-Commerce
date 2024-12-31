@@ -1,8 +1,8 @@
 import React from "react";
-import "../styles/ConfirmDeleteModal.css"; // Stil dosyasını import ediyoruz
+import "../styles/ConfirmDeleteModal.css";
 
 const ConfirmDeleteModal = ({ show, onConfirm, onCancel }) => {
-  if (!show) return null; // Eğer show false ise modal render edilmez
+  if (!show) return null;
 
   return (
     <div className="modal-overlay">

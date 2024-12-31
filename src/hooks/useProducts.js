@@ -1,4 +1,3 @@
-// hooks/useProducts.js
 import { useState, useEffect } from "react";
 
 const useProducts = (productId = null) => {
@@ -8,10 +7,10 @@ const useProducts = (productId = null) => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      let url = "https://fakestoreapi.com/products"; // Tüm ürünler için API URL'si
+      let url = "https://fakestoreapi.com/products";
 
       if (productId) {
-        url = `https://fakestoreapi.com/products/${productId}`; // Tek bir ürün için API URL'si
+        url = `https://fakestoreapi.com/products/${productId}`;
       }
 
       try {
@@ -26,7 +25,7 @@ const useProducts = (productId = null) => {
     };
 
     fetchData();
-  }, [productId]); // productId değişirse yeniden veri al
+  }, [productId]);
 
   return { products, loading };
 };

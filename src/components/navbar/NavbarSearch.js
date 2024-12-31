@@ -12,14 +12,12 @@ function NavbarSearch() {
   const searchInputRef = useRef(null);
   const suggestionsRef = useRef(null);
 
-  // Sayfa yüklendiğinde localStorage'dan recentSearches'i al
   useEffect(() => {
     const storedSearches =
       JSON.parse(localStorage.getItem("recentSearches")) || [];
     setRecentSearches(storedSearches);
   }, []);
 
-  // Arama query değiştiğinde filtreleme işlemi
   useEffect(() => {
     if (!loading && products.length > 0) {
       if (searchQuery.trim() !== "") {
@@ -45,18 +43,15 @@ function NavbarSearch() {
     const uniqueSearches = [...new Set(updatedSearches)];
     setRecentSearches(uniqueSearches);
 
-    // Güncellenen arama geçmişini localStorage'a kaydet
     localStorage.setItem("recentSearches", JSON.stringify(uniqueSearches));
   };
 
   const handleRecentSearchDelete = (searchQueryToDelete) => {
-    // Silinen öğeyi arama geçmişinden çıkar
     const updatedSearches = recentSearches.filter(
       (search) => search !== searchQueryToDelete
     );
     setRecentSearches(updatedSearches);
 
-    // Güncellenen arama geçmişini localStorage'a kaydet
     localStorage.setItem("recentSearches", JSON.stringify(updatedSearches));
   };
 
@@ -97,7 +92,6 @@ function NavbarSearch() {
             boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
           }}
         />
-        {/* Arama ikonu */}
         {!searchQuery && (
           <button
             type="button"
@@ -112,7 +106,6 @@ function NavbarSearch() {
             <i className="bi bi-search"></i>
           </button>
         )}
-        {/* X ikonu */}
         {searchQuery && (
           <button
             type="button"
@@ -130,7 +123,6 @@ function NavbarSearch() {
         )}
       </form>
 
-      {/* Arama önerileri */}
       {isSearchFocused &&
         (filteredProducts.length > 0 || recentSearches.length > 0) && (
           <ul

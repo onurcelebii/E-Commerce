@@ -9,7 +9,6 @@ function CartSummary({ total, handleClearCart }) {
         <button className="btn btn-primary" onClick={handleClearCart}>
           Clear Cart
         </button>
-        {/* Proceed to Payment butonuna tıklanınca direkt ödeme sayfasına yönlendir */}
         <Link to="/payment" className="btn btn-success" state={{ total }}>
           Proceed to Payment
         </Link>

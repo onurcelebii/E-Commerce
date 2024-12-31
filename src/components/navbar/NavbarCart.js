@@ -5,7 +5,6 @@ import { useCart } from "../../context/CartContext";
 function NavbarCart() {
   const { cart } = useCart(); // Sepet verisini alıyoruz
 
-  // Sepetteki toplam ürün sayısını hesaplıyoruz
   const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
 
   return (
@@ -16,7 +15,6 @@ function NavbarCart() {
         style={{ fontWeight: "bold", gap: "5px" }}
       >
         <i className="bi bi-cart-fill"></i> Cart
-        {/* Eğer sepette ürün varsa, toplam sayıyı gösteriyoruz */}
         {totalItems > 0 && (
           <span className="badge bg-primary ms-2">{totalItems}</span>
         )}

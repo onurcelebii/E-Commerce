@@ -1,4 +1,3 @@
-// src/components/SortDropdown.js
 import React from "react";
 
 const SortDropdown = ({ value, onChange }) => (
