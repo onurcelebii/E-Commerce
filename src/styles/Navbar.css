@@ -1,0 +1,52 @@
+/* Kategoriler Menüsü */
+.categories-menu {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Kategoriler listesinin tümünü sola hizala */
+.categories-menu .container {
+    display: flex;
+    justify-content: flex-start;
+    /* Kategorileri sola yasla */
+}
+
+/* Liste stilini sıfırla ve kategoriler arasındaki boşluğu ayarla */
+.categories-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    /* Kategoriler arasındaki boşluğu ayarla */
+}
+
+/* Kategoriler arası mesafeyi ayarla */
+.categories-menu .nav-item {
+    margin-right: 0;
+    /* Burada ekstra boşluk bırakma */
+}
+
+/* Her kategori elemanının başına nokta ekleyin */
+.categories-menu .nav-link::before {
+    content: "• ";
+    /* Nokta ekleyin */
+    color: #333;
+    /* Noktanın rengini belirleyin */
+    font-size: 20px;
+    /* Noktanın boyutunu ayarlayın */
+}
+
+/* Nav link stilini koru */
+.categories-menu .nav-link {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Kategoriler linklerine hover efekti */
+.categories-menu .nav-link:hover {
+    color: #007bff;
+    text-decoration: none;
+}

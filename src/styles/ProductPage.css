@@ -1,0 +1,146 @@
+/* Ürün resmi için çerçeve */
+.product-image-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background-color: #fff;
+    overflow: hidden;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Resmi küçültme */
+.product-image-container img {
+    max-width: 70%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+
+/* Ürün başlığı */
+.product-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Ürün fiyatı */
+.product-price {
+    font-size: 1.5rem;
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Sepete Ekle butonu */
+.add-to-cart-btn {
+    background-color: #007bff;
+    /* Mavi renk */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    /* Buton boyutları */
+    font-size: 1.1rem;
+    /* Yazı boyutu */
+    font-weight: bold;
+    /* Yazıyı kalın yap */
+    border-radius: 50px;
+    /* Yuvarlak köşeler */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Yumuşak geçiş efektleri */
+    display: flex;
+    align-items: center;
+    /* İkon ve yazıyı hizalamak */
+    justify-content: center;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0056b3;
+    /* Hover durumunda renk değişir */
+    transform: scale(1.05);
+    /* Hover durumunda büyür */
+}
+
+.add-to-cart-btn:active {
+    background-color: #004085;
+    /* Tıklanırken daha koyu renk */
+    transform: scale(0.98);
+    /* Tıklanırken biraz küçülür */
+}
+
+/* Sepet ikonu */
+.add-to-cart-btn i {
+    margin-right: 8px;
+    /* İkon ve yazı arasına boşluk */
+}
+
+/* Yıldız derecelendirme */
+.star-rating {
+    display: flex;
+    align-items: center;
+}
+
+.star-rating i {
+    margin-right: 3px;
+}
+
+.star-rating span {
+    margin-left: 10px;
+    color: #888;
+}
+
+/* Uyarı mesajı */
+.alert {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Genel body yazı tipi */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Başlıklar için Montserrat */
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Fiyat kısmı için çerçeve */
+.product-price-container {
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    background-color: #f0f9f4;
+    padding: 12px 20px;
+    display: inline-block;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #28a745;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Fiyat kısmının yazı tipi ve stil */
+.product-price-container span {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #333;
+}
