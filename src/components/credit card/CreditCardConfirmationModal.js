@@ -15,7 +15,7 @@ function CreditCardConfirmationModal({ total, onCancel, onConfirm }) {
           </div>
           <div className="modal-body">
             <p>
-              Are you sure you want to proceed with the payment of {total} ₺?
+              Are you sure you want to proceed with the payment of {total} €?
             </p>
           </div>
           <div className="modal-footer">

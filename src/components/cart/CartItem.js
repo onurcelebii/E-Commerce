@@ -14,7 +14,7 @@ function CartItem({ item, increaseQuantity, decreaseQuantity, handleDelete }) {
         <div>
           <h5>{item.title}</h5>
           <p>
-            {item.quantity} x {item.price} ₺ = {item.quantity * item.price} ₺
+            {item.quantity} x {item.price} € = {item.quantity * item.price} €
           </p>
         </div>
         <div className="d-flex">
