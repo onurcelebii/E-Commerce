@@ -6,7 +6,7 @@ import {
   useNavigate,
   Navigate,
 } from "react-router-dom";
-import { CartProvider } from "./context/CartContext"; // CartProvider'ı içe aktarıyoruz
+import { CartProvider } from "./context/CartContext";
 import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
 import CartPage from "./pages/CartPage";
