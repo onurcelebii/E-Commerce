@@ -4,69 +4,51 @@ import "../../styles/Footer.css";
 
 function Footer() {
   return (
-    <footer className="bg-dark text-white mt-5">
-      <div className="container py-5">
-        <div className="row">
-          <div className="col-md-3">
-            <h5>About Us</h5>
-            <p>
-              Our e-commerce site aims to offer you the best products at the
-              most affordable prices. You can contact us for more information.
+    <footer className="footer bg-dark text-light">
+      <div className="container py-4">
+        <div className="row d-flex align-items-center justify-content-between">
+          {/* About Us */}
+          <div className="col-md-3 mb-3">
+            <h6 className="text-uppercase fw-bold">About Us</h6>
+            <p className="small">
+              Best products at affordable prices. Contact us for more info.
             </p>
           </div>
-          <div className="col-md-3">
-            <h5>Categories</h5>
-            <ul className="list-unstyled">
-              <li>
-                <Link
-                  to="/category/men's%20clothing"
-                  className="text-white text-decoration-none"
-                >
-                  Men's Clothing
+
+          {/* Categories */}
+          <div className="col-md-3 mb-3">
+            <h6 className="text-uppercase fw-bold">Categories</h6>
+            <ul className="list-inline small">
+              <li className="list-inline-item me-3">
+                <Link to="/category/men's%20clothing" className="text-light">
+                  Men's
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/category/jewelery"
-                  className="text-white text-decoration-none"
-                >
+              <li className="list-inline-item">
+                <Link to="/category/women's%20clothing" className="text-light">
+                  Women's
+                </Link>
+              </li>
+              <li className="list-inline-item me-3">
+                <Link to="/category/jewelery" className="text-light">
                   Jewelery
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/category/electronics"
-                  className="text-white text-decoration-none"
-                >
+              <li className="list-inline-item me-3">
+                <Link to="/category/electronics" className="text-light">
                   Electronics
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/category/women's%20clothing"
-                  className="text-white text-decoration-none"
-                >
-                  Women's Clothing
                 </Link>
               </li>
             </ul>
           </div>
-          <div className="col-md-3">
-            <h5>Communication</h5>
-            <p>
-              Address: Istanbul, Türkiye <br />
-              Phone: +90 555 555 55 55 <br />
-              Email: info@eticaret.com
-            </p>
-          </div>
-          <div className="col-md-3">
-            <h5>Follow Us</h5>
+          <div className="col-md-3 mb-3">
+            <h6 className="text-uppercase fw-bold">Follow Us</h6>
             <div className="d-flex gap-3">
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white"
+                className="text-light fs-5"
               >
                 <i className="bi bi-facebook"></i>
               </a>
@@ -74,7 +56,7 @@ function Footer() {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white"
+                className="text-light fs-5"
               >
                 <i className="bi bi-twitter"></i>
               </a>
@@ -82,7 +64,7 @@ function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white"
+                className="text-light fs-5"
               >
                 <i className="bi bi-instagram"></i>
               </a>
@@ -90,8 +72,8 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="text-center py-3 bg-secondary">
-        <p className="mb-0">© 2024 E-Commerce. All rights reserved.</p>
+      <div className="text-center py-2 bg-secondary">
+        <p className="mb-0 small">© 2024 E-Commerce. All rights reserved.</p>
       </div>
     </footer>
   );
