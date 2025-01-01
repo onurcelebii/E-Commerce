@@ -3,6 +3,8 @@ import NavbarSearch from "./NavbarSearch";
 import NavbarCart from "./NavbarCart";
 import NavbarCategories from "./NavbarCategories";
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo.png";
+import "../../styles/Navbar.css";
 
 const Navbar = () => {
   return (
@@ -10,6 +12,7 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/home">
+            <img src={logo} alt="E-Commerce" className="navbar-logo" />
             E-Commerce
           </Link>
           <button
