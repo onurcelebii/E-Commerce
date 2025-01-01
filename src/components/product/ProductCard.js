@@ -1,12 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // useNavigate hook'u
 import StarsRating from "./StarsRating";
 import "../../styles/ProductCard.css";
 
-const ProductCard = ({ product, onAddToCart }) => {
+const ProductCard = ({ product }) => {
+  const navigate = useNavigate(); // useNavigate hook'u ile yönlendirme
+
+  // Kart tıklandığında yönlendirme işlemi
+  const handleCardClick = () => {
+    navigate(`/product/${product.id}`);
+  };
+
   return (
     <div key={product.id} className="col-md-4">
-      <div className="card home-card">
+      <div className="card home-card" onClick={handleCardClick}>
         <img
           src={product.image}
           className="card-img-top home-image"
@@ -23,6 +30,7 @@ const ProductCard = ({ product, onAddToCart }) => {
             <Link
               to={`/product/${product.id}`}
               className="btn btn-outline-primary mt-2"
+              onClick={(e) => e.stopPropagation()} // Link tıklandığında kart tıklamasını engeller
             >
               View Product
             </Link>

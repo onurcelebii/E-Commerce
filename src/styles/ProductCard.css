@@ -41,3 +41,13 @@
   height: 3rem;
   border-width: 0.3rem;
 }
+
+.home-card {
+  cursor: pointer; /* İmleç tıklanabilir olduğunu gösterecek */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-card:hover {
+  transform: scale(1.02); /* Hover sırasında hafif bir büyüme efekti */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Hover sırasında gölge efekti */
+}
