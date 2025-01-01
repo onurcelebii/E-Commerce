@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { useCart } from "../context/CartContext";
+import { Link } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa"; // Sepet ikonu
 import CartItem from "../components/cart/CartItem";
 import CartSummary from "../components/cart/CartSummary";
 import CartModals from "../components/cart/CartModals";
+import "../styles/CartPage.css"; // CSS dosyasını import ettik
 
 function CartPage() {
   const {
@@ -32,8 +35,14 @@ function CartPage() {
 
   if (cart.length === 0) {
     return (
-      <div className="container mt-5">
-        <h2>Your Cart is Empty</h2>
+      <div className="container cart-empty-container">
+        <div className="cart-empty-message">
+          <FaShoppingCart size={50} className="text-muted" />
+          <h2>There is no product in your cart.</h2>
+        </div>
+        <Link to="/" className="btn btn-primary cart-empty-button">
+          Start Shopping
+        </Link>
       </div>
     );
   }

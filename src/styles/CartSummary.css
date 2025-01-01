@@ -1,0 +1,58 @@
+.cart-summary {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .cart-summary:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-summary h4 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .cart-summary h4 span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #28a745; /* Yeşil renk ile 'total' kısmı daha dikkat çekici */
+  }
+  
+  .cart-summary .btn {
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .cart-summary .btn:hover {
+    transform: scale(1.05); /* Hover ile buton büyümesi */
+  }
+  
+  .cart-summary .btn-outline-danger {
+    background-color: #fff;
+    border: 2px solid #dc3545;
+    color: #dc3545;
+  }
+  
+  .cart-summary .btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .cart-summary .btn-success {
+    background-color: #28a745;
+    color: white;
+    border: none;
+  }
+  
+  .cart-summary .btn-success:hover {
+    background-color: #218838;
+  }
+  
