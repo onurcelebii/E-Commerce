@@ -1,0 +1,62 @@
+.credit-card-form {
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.credit-card-form .form-label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.credit-card-form .form-control {
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.credit-card-form .form-control:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.credit-card-form .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.credit-card-form .col-md-6 {
+  width: 48%;
+}
+
+.credit-card-form .icon-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.credit-card-form .icon-group img {
+  width: 30px;
+  height: 30px;
+}
+
+.credit-card-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+.credit-card-form button:hover {
+  background-color: #0056b3;
+}

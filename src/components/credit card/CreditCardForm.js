@@ -1,4 +1,5 @@
 import React from "react";
+import "../../styles/CreditCardForm.css"; // Normal CSS dosyasını import ediyoruz
 
 function CreditCardForm({
   cardholderName,
@@ -12,7 +13,7 @@ function CreditCardForm({
   handleSubmit,
 }) {
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="credit-card-form">
       <div className="mb-3">
         <label htmlFor="cardholderName" className="form-label">
           Cardholder Name
@@ -59,6 +60,7 @@ function CreditCardForm({
             required
           />
         </div>
+
         <div className="col-md-6 mb-3">
           <label htmlFor="cvv" className="form-label">
             CVV
@@ -75,9 +77,7 @@ function CreditCardForm({
           />
         </div>
       </div>
-      <button type="submit" className="btn btn-primary">
-        Pay Now
-      </button>
+      <button type="submit">Pay Now</button>
     </form>
   );
 }
