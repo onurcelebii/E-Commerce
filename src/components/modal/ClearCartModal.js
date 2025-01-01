@@ -8,8 +8,8 @@ const ClearCartModal = ({ show, onConfirm, onCancel }) => {
     <div className="modal show" tabIndex="-1" style={{ display: "block" }}>
       <div className="modal-dialog modal-dialog-centered">
         <div className="modal-content shadow-lg border-0 rounded-3">
-          <div className="modal-header">
-            <h5 className="modal-title">Clear Cart</h5>
+          <div className="modal-header border-0">
+            <h5 className="modal-title text-center w-100">Clear Cart</h5>
             <button
               type="button"
               className="btn-close"
@@ -17,14 +17,15 @@ const ClearCartModal = ({ show, onConfirm, onCancel }) => {
             ></button>
           </div>
           <div className="modal-body">
-            <p>Are you sure you want to clear your cart?</p>
+            <p className="text-center">
+              Are you sure you want to clear your cart?
+            </p>
           </div>
-          <div className="modal-footer">
+          <div className="modal-footer border-0 justify-content-center">
             <button
               type="button"
-              className="btn btn-secondary"
+              className="btn btn-outline-secondary"
               onClick={onCancel}
-              style={{ borderRadius: "25px" }}
             >
               Cancel
             </button>
@@ -32,7 +33,6 @@ const ClearCartModal = ({ show, onConfirm, onCancel }) => {
               type="button"
               className="btn btn-danger"
               onClick={onConfirm}
-              style={{ borderRadius: "25px" }}
             >
               Yes, Clear Cart
             </button>
