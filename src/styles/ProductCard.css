@@ -1,53 +1,117 @@
 .card {
-  min-height: 400px;
-}
-
-.card-body {
+  min-height: 450px;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  padding-bottom: 60px;
+  animation: fadeInUp 0.5s ease-in-out; /* Animasyon uygulanıyor */
+  animation-delay: calc(var(--animation-index) * 0.1s); /* Gecikme efekti için */
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.home-image {
+  height: 200px;
+  object-fit: contain;
+  object-position: center;
+  margin: 10px auto;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* Solda hizalama */
+  margin-bottom: 10px;
+  gap: 5px;
+  /* Yıldızlar ve metin arasında boşluk */
+}
+
+.card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   flex-grow: 1;
+}
+
+.card-footer {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .col-md-4 {
   margin-bottom: 20px;
 }
 
-.card-title {
-  font-size: 1.1rem;
+.card-price {
+  font-size: 1.2rem;
   font-weight: bold;
+  color: #007bff;
 }
 
-.home-image {
-  height: 250px;
-  object-fit: contain;
-  object-position: center;
-  transform: scale(0.9);
+.btn-view-product {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(45deg, #5cbefc, #3fa9f5);
+  /* Daha açık ve canlı tonlar */
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
 }
 
-.d-flex .ms-2 {
-  margin-right: 5px;
+.btn-view-product:hover {
+  background: linear-gradient(45deg, #3fa9f5, #298fe3);
+  /* Hover için hafif koyulaşma */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-.loading-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+.btn-view-product:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(92, 190, 252, 0.3);
+  /* Açık mavi odak çerçevesi */
 }
 
-.spinner-border {
-  width: 3rem;
-  height: 3rem;
-  border-width: 0.3rem;
+.btn-view-product:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-.home-card {
-  cursor: pointer; /* İmleç tıklanabilir olduğunu gösterecek */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.home-card:hover {
-  transform: scale(1.02); /* Hover sırasında hafif bir büyüme efekti */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Hover sırasında gölge efekti */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Başlangıçta aşağıda */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Son pozisyon */
+  }
 }
