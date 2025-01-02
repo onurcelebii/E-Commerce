@@ -16,7 +16,7 @@ const useProducts = (productId = null) => {
       try {
         const response = await fetch(url);
         const data = await response.json();
-        setProducts(productId ? [data] : data); // Tek ürünse diziyi array içine al
+        setProducts(productId ? [data] : data);
       } catch (error) {
         console.error("Error fetching products:", error);
       } finally {

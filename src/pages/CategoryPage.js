@@ -29,7 +29,7 @@ function CategoryPage() {
       <h2 className="text-center">
         {category
           ? formatCategoryName(decodeCategoryName(category))
-          : "Category Not Found"}{" "}
+          : "Category Not Found"}
       </h2>
       {loading ? (
         <Loading />
@@ -37,40 +37,40 @@ function CategoryPage() {
         <div className="row">
           {filteredProducts.map((product, index) => (
             <div key={product.id} className="col-md-4">
-              <div
-                className="card home-card"
-                style={{ "--animation-index": index }}
+              <Link
+                to={`/product/${product.id}`}
+                className="card-link"
+                style={{
+                  textDecoration: "none", 
+                }}
               >
-                <img
-                  src={product.image}
-                  className="card-img-top home-image"
-                  alt={product.title}
-                />
-                <div className="card-body">
-                  <h5 className="card-title">{product.title}</h5>
-                  <div className="rating-container">
-                    <StarsRating rating={product.rating.rate} />
-                    <span>({product.rating.count})</span>
+                <div
+                  className="card home-card"
+                  style={{ "--animation-index": index }}
+                >
+                  <img
+                    src={product.image}
+                    className="card-img-top home-image"
+                    alt={product.title}
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title">{product.title}</h5>
+
+                    <div className="rating-container">
+                      <StarsRating rating={product.rating.rate} />
+                      <span>({product.rating.count})</span>
+                    </div>
+                  </div>
+                  <div className="card-footer">
+                    <div className="card-price">
+                      ${product.price.toFixed(2)}
+                    </div>
+                    <div className="btn-view-product">
+                      <span className="arrow-icon">&#8594;</span>
+                    </div>
                   </div>
                 </div>
-                <div className="card-footer">
-                  <div className="card-price">${product.price.toFixed(2)}</div>
-                  <div
-                    className="btn-view-product"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                    }}
-                  >
-                    <Link
-                      to={`/product/${product.id}`}
-                      className="arrow-icon"
-                      style={{ textDecoration: "none" }}
-                    >
-                      &#8594;
-                    </Link>
-                  </div>
-                </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>
