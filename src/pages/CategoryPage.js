@@ -30,15 +30,17 @@ function CategoryPage() {
         {category
           ? formatCategoryName(decodeCategoryName(category))
           : "Category Not Found"}{" "}
-        {/* Categories */}
       </h2>
       {loading ? (
         <Loading />
       ) : filteredProducts.length > 0 ? (
         <div className="row">
-          {filteredProducts.map((product) => (
+          {filteredProducts.map((product, index) => (
             <div key={product.id} className="col-md-4">
-              <div className="card home-card">
+              <div
+                className="card home-card"
+                style={{ "--animation-index": index }}
+              >
                 <img
                   src={product.image}
                   className="card-img-top home-image"
@@ -46,17 +48,25 @@ function CategoryPage() {
                 />
                 <div className="card-body">
                   <h5 className="card-title">{product.title}</h5>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div className="d-flex align-items-center">
-                      <span className="ms-2">{product.rating.rate}</span>
-                      <StarsRating rating={product.rating.rate} />
-                      <span className="ms-2">({product.rating.count})</span>
-                    </div>
+                  <div className="rating-container">
+                    <StarsRating rating={product.rating.rate} />
+                    <span>({product.rating.count})</span>
+                  </div>
+                </div>
+                <div className="card-footer">
+                  <div className="card-price">${product.price.toFixed(2)}</div>
+                  <div
+                    className="btn-view-product"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                    }}
+                  >
                     <Link
                       to={`/product/${product.id}`}
-                      className="btn btn-outline-primary mt-2"
+                      className="arrow-icon"
+                      style={{ textDecoration: "none" }}
                     >
-                      View Product
+                      &#8594;
                     </Link>
                   </div>
                 </div>

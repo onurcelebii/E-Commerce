@@ -1,6 +1,6 @@
 .card {
   min-height: 450px;
-  border: none;
+  border: none !important;
   border-radius: 12px;
   overflow: hidden;
   display: flex;
@@ -61,7 +61,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 !important;
-  margin-top: 0.25rem !important;  /* Bu, ok ile fiyat arasındaki mesafeyi kısaltır */
+  margin-top: 0.25rem !important;
+  /* Bu, ok ile fiyat arasındaki mesafeyi kısaltır */
 
 }
 
@@ -69,7 +70,8 @@
   font-size: 1.2rem;
   font-weight: bold;
   color: #007bff;
-  margin-right: 0 !important; /* Fiyat ile ok arasındaki mesafeyi sıfırlayalım */
+  margin-right: 0 !important;
+  /* Fiyat ile ok arasındaki mesafeyi sıfırlayalım */
 
 }
 
@@ -83,7 +85,8 @@
   align-items: center;
   padding: 0.5rem;
   transition: all 0.3s ease-in-out;
-  margin-left: 0 !important; /* Bu, buton ile fiyat arasındaki mesafeyi sıfırlayacak */
+  margin-left: 0 !important;
+  /* Bu, buton ile fiyat arasındaki mesafeyi sıfırlayacak */
 
 }
 
