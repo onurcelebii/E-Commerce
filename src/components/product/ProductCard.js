@@ -31,15 +31,15 @@ const ProductCard = ({ product, index }) => {
         </div>
         <div className="card-footer">
           <div className="card-price">${product.price.toFixed(2)}</div>
-          <button
-            className="btn btn-view-product"
+          <div
+            className="btn-view-product"
             onClick={(e) => {
               e.stopPropagation();
               navigate(`/product/${product.id}`);
             }}
           >
-            View Product
-          </button>
+            <span className="arrow-icon">&#8594;</span>
+          </div>
         </div>
       </div>
     </div>

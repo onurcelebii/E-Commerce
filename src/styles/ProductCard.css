@@ -60,42 +60,49 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 !important;
+  margin-top: 0.25rem !important;  /* Bu, ok ile fiyat arasındaki mesafeyi kısaltır */
+
 }
 
 .card-price {
   font-size: 1.2rem;
   font-weight: bold;
   color: #007bff;
+  margin-right: 0 !important; /* Fiyat ile ok arasındaki mesafeyi sıfırlayalım */
+
 }
 
 .btn-view-product {
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 600;
-  color: #fff;
-  background: linear-gradient(145deg, #5cbefc, #3fa9f5);
-  border: none;
-  border-radius: 30px;
-  padding: 0.75rem 2rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color: #3fa9f5;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
   transition: all 0.3s ease-in-out;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  margin-left: 0 !important; /* Bu, buton ile fiyat arasındaki mesafeyi sıfırlayacak */
+
 }
 
 .btn-view-product:hover {
-  background: linear-gradient(145deg, #3fa9f5, #298fe3);
+  color: #298fe3;
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .btn-view-product:focus {
   outline: none;
-  box-shadow: 0 0 0 4px rgba(92, 190, 252, 0.3);
 }
 
-.btn-view-product:active {
-  transform: translateY(1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+.arrow-icon {
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-view-product:hover .arrow-icon {
+  transform: translateX(5px);
 }
 
 .col-md-4 {
