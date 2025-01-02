@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/SortDropdown.css"
+import "../../styles/SortDropdown.css";
 
 const SortDropdown = ({ value, onChange }) => (
   <div className="sort-dropdown mb-3">

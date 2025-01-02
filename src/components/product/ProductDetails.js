@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import StarsRating from "./StarsRating";
 import "../../styles/ProductDetails.css";
 
 const ProductDetails = ({ title, rating, description, price, onAddToCart }) => {
+  const [showMessage, setShowMessage] = useState(false);
+
+  const handleAddToCart = () => {
+    onAddToCart();
+    setShowMessage(true);
+    setTimeout(() => setShowMessage(false), 3000); // 3 saniye sonra mesaj kaybolacak
+  };
+
   return (
     <div className="col-md-6 product-details">
       <h1 className="product-title">{title}</h1>
@@ -13,10 +21,14 @@ const ProductDetails = ({ title, rating, description, price, onAddToCart }) => {
       <p className="product-description">{description}</p>
       <div className="price-add-container">
         <span className="product-price">{price} €</span>
-        <button className="add-to-cart-btn" onClick={onAddToCart}>
+        <button className="add-to-cart-btn" onClick={handleAddToCart}>
           <i className="bi bi-cart-plus"></i> Add to Cart
         </button>
       </div>
+
+      {showMessage && (
+        <div className="add-to-cart-message">Product added to the cart!</div>
+      )}
     </div>
   );
 };

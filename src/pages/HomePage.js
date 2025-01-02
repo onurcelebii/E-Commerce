@@ -7,7 +7,6 @@ import Loading from "../utils/Loading";
 import ProductList from "../components/product/ProductList";
 import "../styles/HomePage.css";
 
-
 const HomePage = () => {
   const { products, loading } = useProducts();
   const { sortOption, setSortOption, sortProducts } = useSort();

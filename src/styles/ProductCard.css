@@ -62,8 +62,6 @@
   align-items: center;
   padding: 0 !important;
   margin-top: 0.25rem !important;
-  /* Bu, ok ile fiyat arasındaki mesafeyi kısaltır */
-
 }
 
 .card-price {
@@ -71,8 +69,6 @@
   font-weight: bold;
   color: #007bff;
   margin-right: 0 !important;
-  /* Fiyat ile ok arasındaki mesafeyi sıfırlayalım */
-
 }
 
 .btn-view-product {
@@ -86,8 +82,6 @@
   padding: 0.5rem;
   transition: all 0.3s ease-in-out;
   margin-left: 0 !important;
-  /* Bu, buton ile fiyat arasındaki mesafeyi sıfırlayacak */
-
 }
 
 .btn-view-product:hover {
