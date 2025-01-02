@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useProducts from "../../hooks/useProducts";
-import { formatCategoryName, formatCategoryURL } from "../../utils/utils";
+import { formatCategoryName, formatCategoryURL } from "../../utils/Utils";
 import "../../styles/NavbarCategories.css";
 
 function NavbarCategories() {

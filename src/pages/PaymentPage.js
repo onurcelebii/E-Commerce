@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
-import CreditCardForm from "../components/credit card/CreditCardForm";
-import CreditCardPreview from "../components/credit card/CreditCardPreview";
-import CreditCardConfirmationModal from "../components/credit card/CreditCardConfirmationModal";
+import CreditCardForm from "../components/credit-card/CreditCardForm";
+import CreditCardPreview from "../components/credit-card/CreditCardPreview";
+import CreditCardConfirmationModal from "../components/credit-card/CreditCardConfirmationModal";
 import {
   handleCardholderNameChange,
   handleCardNumberChange,
   handleExpiryDateChange,
   handleCvvChange,
-} from "../utils/utils";
+} from "../utils/Utils";
 import "../styles/PaymentPage.css";
 
 function PaymentPage() {
