@@ -9,10 +9,10 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   padding-bottom: 60px;
-  animation: fadeInUp 0.5s ease-in-out; /* Animasyon uygulanıyor */
-  animation-delay: calc(var(--animation-index) * 0.1s); /* Gecikme efekti için */
+  animation: fadeInUp 0.5s ease-in-out;
+  animation-delay: calc(var(--animation-index) * 0.1s);
+  cursor: pointer;
 }
-
 
 .card:hover {
   transform: translateY(-5px);
@@ -20,30 +20,10 @@
 }
 
 .home-image {
-  height: 200px;
+  height: 250px;
   object-fit: contain;
   object-position: center;
-  margin: 10px auto;
-}
-
-.card-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-
-}
-
-.rating-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  /* Solda hizalama */
-  margin-bottom: 10px;
-  gap: 5px;
-  /* Yıldızlar ve metin arasında boşluk */
+  margin: 15px auto;
 }
 
 .card-body {
@@ -52,6 +32,24 @@
   flex-direction: column;
   justify-content: flex-start;
   flex-grow: 1;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+  gap: 5px;
 }
 
 .card-footer {
@@ -64,10 +62,6 @@
   align-items: center;
 }
 
-.col-md-4 {
-  margin-bottom: 20px;
-}
-
 .card-price {
   font-size: 1.2rem;
   font-weight: bold;
@@ -75,43 +69,53 @@
 }
 
 .btn-view-product {
-  font-size: 0.9rem;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: 600;
   color: #fff;
-  background: linear-gradient(45deg, #5cbefc, #3fa9f5);
-  /* Daha açık ve canlı tonlar */
+  background: linear-gradient(145deg, #5cbefc, #3fa9f5);
   border: none;
-  border-radius: 25px;
-  padding: 0.5rem 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  padding: 0.75rem 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .btn-view-product:hover {
-  background: linear-gradient(45deg, #3fa9f5, #298fe3);
-  /* Hover için hafif koyulaşma */
-  transform: translateY(-3px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(145deg, #3fa9f5, #298fe3);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .btn-view-product:focus {
   outline: none;
   box-shadow: 0 0 0 4px rgba(92, 190, 252, 0.3);
-  /* Açık mavi odak çerçevesi */
 }
 
 .btn-view-product:active {
   transform: translateY(1px);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.col-md-4 {
+  margin-bottom: 20px;
+}
+
+.text-center {
+  font-size: 1.1rem;
+  color: #777;
+  margin-top: 20px;
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px); /* Başlangıçta aşağıda */
+    transform: translateY(20px);
   }
+
   to {
     opacity: 1;
-    transform: translateY(0); /* Son pozisyon */
+    transform: translateY(0);
   }
 }
