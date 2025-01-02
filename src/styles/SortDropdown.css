@@ -1,0 +1,60 @@
+/* SortDropdown - Modern and Elegant Style */
+.sort-dropdown {
+    max-width: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Dropdown Select */
+  .sort-dropdown .form-select {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #495057;
+    border: 2px solid #e1e4e8;
+    border-radius: 8px;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    outline: none;
+  }
+  
+  /* Hover and Focus Effects */
+  .sort-dropdown .form-select:hover,
+  .sort-dropdown .form-select:focus {
+    border-color: #007bff;
+    background-color: #f1f9ff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+  }
+  
+  /* Dropdown Option Style */
+  .sort-dropdown .form-select option {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #495057;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  /* Animation */
+  .sort-dropdown .form-select {
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

@@ -1,7 +1,8 @@
 import React from "react";
+import "../../styles/SortDropdown.css"
 
 const SortDropdown = ({ value, onChange }) => (
-  <div className="mb-3">
+  <div className="sort-dropdown mb-3">
     <select
       className="form-select"
       onChange={(e) => onChange(e.target.value)}
@@ -14,5 +15,4 @@ const SortDropdown = ({ value, onChange }) => (
     </select>
   </div>
 );
-
 export default SortDropdown;
