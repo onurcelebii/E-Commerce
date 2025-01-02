@@ -1,38 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import StarsRating from "./StarsRating";
-import AlertMessage from "../modal/AlertMessage";
+import "../../styles/ProductDetails.css";
 
 const ProductDetails = ({ title, rating, description, price, onAddToCart }) => {
-  const [showAlert, setShowAlert] = useState(false);
-
-  const handleAddToCart = () => {
-    onAddToCart();
-    setShowAlert(true);
-  };
-
   return (
-    <div className="col-md-6">
-      <h2 className="product-title">{title}</h2>
-      <div className="d-flex align-items-center mb-3">
-        <span className="ms-2">{rating.rate}</span>
+    <div className="col-md-6 product-details">
+      <h1 className="product-title">{title}</h1>
+      <div className="rating-container">
         <StarsRating rating={rating.rate} />
-        <span className="ms-2">({rating.count})</span>
+        <span className="rating-text">({rating.count} Reviews)</span>
       </div>
-
-      <p>{description}</p>
-
-      <div className="d-flex justify-content-between align-items-center">
-        <div className="product-price-container">
-          <span>{price} €</span>
-        </div>
-        <button className="add-to-cart-btn" onClick={handleAddToCart}>
+      <p className="product-description">{description}</p>
+      <div className="price-add-container">
+        <span className="product-price">{price} €</span>
+        <button className="add-to-cart-btn" onClick={onAddToCart}>
           <i className="bi bi-cart-plus"></i> Add to Cart
         </button>
       </div>
-
-      {showAlert && (
-        <AlertMessage message="Product added to cart successfully!" />
-      )}
     </div>
   );
 };

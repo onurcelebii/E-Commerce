@@ -9,8 +9,8 @@ import "../styles/ProductPage.css";
 
 function ProductPage() {
   const { id } = useParams();
-  const { products, loading } = useProducts(id); // Yalnızca seçilen ürünü alıyoruz
-  const { addToCart, showAlert } = useCart();
+  const { products, loading } = useProducts(id);
+  const { addToCart } = useCart();
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
@@ -24,9 +24,9 @@ function ProductPage() {
   }
 
   return (
-    <div>
-      <div className="container mt-5">
-        <div className="row">
+    <div className="product-page-container">
+      <div className="container">
+        <div className="row align-items-center">
           <ProductImage image={product.image} alt={product.title} />
           <ProductDetails
             title={product.title}
@@ -34,7 +34,6 @@ function ProductPage() {
             description={product.description}
             price={product.price}
             onAddToCart={() => addToCart(product)}
-            showAlert={showAlert}
           />
         </div>
       </div>

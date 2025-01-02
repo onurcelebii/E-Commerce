@@ -1,10 +1,9 @@
 import React from "react";
+import "../../styles/ProductImage.css";
 
 const ProductImage = ({ image, alt }) => (
-  <div className="col-md-6">
-    <div className="product-image-container">
-      <img src={image} alt={alt} className="img-fluid" />
-    </div>
+  <div className="col-md-6 product-image-container">
+    <img src={image} alt={alt} className="product-image" />
   </div>
 );
 

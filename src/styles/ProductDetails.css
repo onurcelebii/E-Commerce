@@ -1,0 +1,127 @@
+.product-details {
+    padding: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+.product-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.rating-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.rating-text {
+    margin-left: 10px;
+    color: #888;
+}
+
+.product-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.price-add-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #28a745;
+    transition: color 0.3s ease;
+}
+
+.product-price:hover {
+    color: #1d9d2b;
+}
+
+.add-to-cart-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-size: 1.1rem;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+@keyframes fadeInDetails {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-details {
+    animation: fadeInDetails 1.2s ease-out;
+}
+
+.add-to-cart-btn {
+    background: linear-gradient(135deg, #ff7f50, #ff4500);
+    /* Renk geçişi */
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, opacity 0.3s ease;
+    position: relative;
+}
+
+.add-to-cart-btn:hover {
+    background: linear-gradient(135deg, #ff4500, #ff7f50);
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+}
+
+.add-to-cart-btn:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%);
+}
+
+.add-to-cart-btn:hover:before {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.add-to-cart-btn i {
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.add-to-cart-btn:hover i {
+    transform: rotate(20deg);
+}

@@ -1,122 +1,15 @@
-.product-image-container {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    background-color: #fff;
-    overflow: hidden;
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.product-page-container {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+    animation: fadeIn 1.5s ease-out;
 }
 
-.product-image-container img {
-    max-width: 70%;
-    max-height: 80%;
-    object-fit: contain;
-}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
 
-
-.product-title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.product-price {
-    font-size: 1.5rem;
-    color: #28a745;
-    font-weight: bold;
-}
-
-.add-to-cart-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.add-to-cart-btn:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-}
-
-.add-to-cart-btn:active {
-    background-color: #004085;
-    transform: scale(0.98);
-}
-
-.add-to-cart-btn i {
-    margin-right: 8px;
-}
-
-.star-rating {
-    display: flex;
-    align-items: center;
-}
-
-.star-rating i {
-    margin-right: 3px;
-}
-
-.star-rating span {
-    margin-left: 10px;
-    color: #888;
-}
-
-.alert {
-    position: fixed;
-    top: 70px;
-    right: 20px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 14px;
-    text-align: center;
-    z-index: 1000;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
-}
-
-h1,
-h2,
-h3,
-h4 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    color: #333;
-}
-
-.product-price-container {
-    border: 2px solid #28a745;
-    border-radius: 8px;
-    background-color: #f0f9f4;
-    padding: 12px 20px;
-    display: inline-block;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #28a745;
-    text-align: center;
-    margin-top: 10px;
-}
-
-.product-price-container span {
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: #333;
+    100% {
+        opacity: 1;
+    }
 }

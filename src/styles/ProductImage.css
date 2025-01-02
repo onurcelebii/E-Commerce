@@ -1,0 +1,41 @@
+.product-image-container {
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-image {
+    max-width: 80%;
+    /* Resmi küçültme */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+    /* Resmin kesilmesini engelle */
+    transition: transform 0.3s ease, opacity 0.5s ease;
+}
+
+.product-image:hover {
+    transform: scale(1.05);
+    /* Hover sırasında büyütme */
+    opacity: 0.8;
+    /* Hover sırasında saydamlık */
+}
+
+/* Animasyon ekleme */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-image {
+    animation: fadeIn 1s ease-out;
+}
