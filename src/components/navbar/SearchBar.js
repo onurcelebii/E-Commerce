@@ -1,80 +1,24 @@
-import React, { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
-import useProducts from "../../hooks/UseProducts";
+import React from "react";
+import useSearch from "../../hooks/UseSearch";
 
 const SearchBar = () => {
-  const { products, loading } = useProducts();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [filteredProducts, setFilteredProducts] = useState([]);
-  const [recentSearches, setRecentSearches] = useState([]);
-  const [isSearchFocused, setIsSearchFocused] = useState(false);
-  const navigate = useNavigate();
-  const searchInputRef = useRef(null);
-  const suggestionsRef = useRef(null);
-
-  useEffect(() => {
-    const storedSearches =
-      JSON.parse(localStorage.getItem("recentSearches")) || [];
-    setRecentSearches(storedSearches);
-  }, []);
-
-  useEffect(() => {
-    if (!loading && products.length > 0 && searchQuery.trim() !== "") {
-      const results = products
-        .filter((product) =>
-          product.title.toLowerCase().includes(searchQuery.toLowerCase())
-        )
-        .slice(0, 3);
-      setFilteredProducts(results);
-    } else {
-      setFilteredProducts([]);
-    }
-  }, [searchQuery, loading, products]);
-
-  const handleProductSelect = (productId) => {
-    navigate(`/product/${productId}`);
-    setSearchQuery("");
-    setFilteredProducts([]);
-    setIsSearchFocused(false);
-
-    const updatedSearches = [searchQuery, ...recentSearches];
-    const uniqueSearches = [...new Set(updatedSearches)];
-    setRecentSearches(uniqueSearches);
-
-    localStorage.setItem("recentSearches", JSON.stringify(uniqueSearches));
-  };
-
-  const handleRecentSearchDelete = (searchQueryToDelete) => {
-    const updatedSearches = recentSearches.filter(
-      (search) => search !== searchQueryToDelete
-    );
-    setRecentSearches(updatedSearches);
-
-    localStorage.setItem("recentSearches", JSON.stringify(updatedSearches));
-  };
-
-  const handleClickOutside = (event) => {
-    if (
-      searchInputRef.current &&
-      !searchInputRef.current.contains(event.target) &&
-      suggestionsRef.current &&
-      !suggestionsRef.current.contains(event.target)
-    ) {
-      setFilteredProducts([]);
-      setIsSearchFocused(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  const {
+    searchQuery,
+    setSearchQuery,
+    filteredProducts,
+    recentSearches,
+    setRecentSearches,
+    isSearchFocused,
+    setIsSearchFocused,
+    searchInputRef,
+    suggestionsRef,
+    handleProductSelect,
+    handleRecentSearchDelete,
+  } = useSearch();
 
   return (
     <li className="nav-item mx-auto" style={{ flex: 1, position: "relative" }}>
-      <form className="d-flex w-50 mx-auto position-relative">
+      <form className="d-flex w-75 mx-auto position-relative">
         <input
           ref={searchInputRef}
           className="form-control"
@@ -88,6 +32,7 @@ const SearchBar = () => {
             padding: "0.75rem 1.25rem",
             borderRadius: "50px",
             boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
+            width: "100%",
           }}
         />
         {!searchQuery && (
@@ -131,7 +76,7 @@ const SearchBar = () => {
               top: "100%",
               left: "50%",
               transform: "translateX(-50%)",
-              width: "50%",
+              width: "75%",
               maxHeight: "200px",
               overflowY: "auto",
               zIndex: 1000,
