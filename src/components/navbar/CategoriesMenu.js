@@ -2,18 +2,16 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useProducts from "../../hooks/useProducts";
 import { formatCategoryName, formatCategoryURL } from "../../utils/Utils";
-import "../../styles/NavbarCategories.css";
+import "../../styles/CategoriesMenu.css";
 
-function NavbarCategories() {
+const CategoriesMenu = () => {
   const { products, loading } = useProducts();
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     if (!loading) {
       const categorySet = new Set(products.map((product) => product.category));
-      const dynamicCategories = Array.from(categorySet);
-      const allCategories = ["All Categories", ...dynamicCategories];
-      setCategories(allCategories);
+      setCategories(["All Categories", ...Array.from(categorySet)]);
     }
   }, [products, loading]);
 
@@ -35,6 +33,6 @@ function NavbarCategories() {
       </div>
     </div>
   );
-}
+};
 
-export default NavbarCategories;
+export default CategoriesMenu;

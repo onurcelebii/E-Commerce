@@ -1,9 +1,10 @@
+// src/components/navbar/Navbar.js
 import React from "react";
-import NavbarSearch from "./NavbarSearch";
-import NavbarCart from "./NavbarCart";
-import NavbarCategories from "./NavbarCategories";
+import SearchBar from "./SearchBar";
+import CartIcon from "./CartIcon";
+import CategoriesMenu from "./CategoriesMenu";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.png";
+import Logo from "./Logo"; // Logo bileşenini içe aktar
 import "../../styles/Navbar.css";
 
 const Navbar = () => {
@@ -12,8 +13,7 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/home">
-            <img src={logo} alt="E-Commerce" className="navbar-logo" />
-            E-Commerce
+            <Logo /> {/* Logo bileşenini burada kullan */}
           </Link>
           <button
             className="navbar-toggler"
@@ -29,13 +29,13 @@ const Navbar = () => {
 
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav w-100 d-flex justify-content-between">
-              <NavbarSearch />
-              <NavbarCart />
+              <SearchBar />
+              <CartIcon />
             </ul>
           </div>
         </div>
       </nav>
-      <NavbarCategories />
+      <CategoriesMenu />
     </>
   );
 };

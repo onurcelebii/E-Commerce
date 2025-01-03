@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import useProducts from "../../hooks/useProducts";
 
-function NavbarSearch() {
-  const { products, loading } = useProducts(); // API'den ürünleri al
+const SearchBar = () => {
+  const { products, loading } = useProducts();
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [recentSearches, setRecentSearches] = useState([]);
@@ -19,17 +19,15 @@ function NavbarSearch() {
   }, []);
 
   useEffect(() => {
-    if (!loading && products.length > 0) {
-      if (searchQuery.trim() !== "") {
-        const results = products
-          .filter((product) =>
-            product.title.toLowerCase().includes(searchQuery.toLowerCase())
-          )
-          .slice(0, 3);
-        setFilteredProducts(results);
-      } else {
-        setFilteredProducts([]);
-      }
+    if (!loading && products.length > 0 && searchQuery.trim() !== "") {
+      const results = products
+        .filter((product) =>
+          product.title.toLowerCase().includes(searchQuery.toLowerCase())
+        )
+        .slice(0, 3);
+      setFilteredProducts(results);
+    } else {
+      setFilteredProducts([]);
     }
   }, [searchQuery, loading, products]);
 
@@ -162,7 +160,11 @@ function NavbarSearch() {
                     <button
                       type="button"
                       onClick={() => handleRecentSearchDelete(query)}
-                      style={{ padding: 0, border: "none", background: "none" }}
+                      style={{
+                        padding: 0,
+                        border: "none",
+                        background: "none",
+                      }}
                     >
                       <i className="bi bi-x-lg"></i>
                     </button>
@@ -199,6 +201,6 @@ function NavbarSearch() {
         )}
     </li>
   );
-}
+};
 
-export default NavbarSearch;
+export default SearchBar;
