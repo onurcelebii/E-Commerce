@@ -18,12 +18,12 @@ const CategoriesMenu = () => {
   return (
     <div className="categories-menu">
       <div className="container">
-        <ul className="d-flex">
+        <ul className="categories-list">
           {categories.map((category) => (
-            <li key={category} className="nav-item">
+            <li key={category} className="category-item">
               <Link
                 to={`/category/${formatCategoryURL(category)}`}
-                className="nav-link"
+                className="category-link"
               >
                 {formatCategoryName(category)}
               </Link>
