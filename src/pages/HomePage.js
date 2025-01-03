@@ -1,8 +1,8 @@
 import React from "react";
 import { useCart } from "../context/CartContext";
 import SortDropdown from "../components/product/SortDropdown";
-import useProducts from "../hooks/useProducts";
-import useSort from "../hooks/useSort";
+import useProducts from "../hooks/UseProducts";
+import useSort from "../hooks/UseSort";
 import Loading from "../utils/Loading";
 import ProductList from "../components/product/ProductList";
 import "../styles/HomePage.css";

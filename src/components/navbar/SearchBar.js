@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import useProducts from "../../hooks/useProducts";
+import useProducts from "../../hooks/UseProducts";
 
 const SearchBar = () => {
   const { products, loading } = useProducts();

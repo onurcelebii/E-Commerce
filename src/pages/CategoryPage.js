@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import useProducts from "../hooks/useProducts";
+import useProducts from "../hooks/UseProducts";
 import { formatCategoryName, decodeCategoryName } from "../utils/Utils";
 import StarsRating from "../components/product/StarsRating";
 import Loading from "../utils/Loading";
@@ -41,7 +41,7 @@ function CategoryPage() {
                 to={`/product/${product.id}`}
                 className="card-link"
                 style={{
-                  textDecoration: "none", 
+                  textDecoration: "none",
                 }}
               >
                 <div

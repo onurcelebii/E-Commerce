@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import useProducts from "../hooks/useProducts";
+import useProducts from "../hooks/UseProducts";
 import { useCart } from "../context/CartContext";
 import Loading from "../utils/Loading";
 import ProductImage from "../components/product/ProductImage";

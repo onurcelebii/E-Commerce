@@ -20,12 +20,12 @@ function Footer() {
             <h6 className="text-uppercase fw-bold">Categories</h6>
             <ul className="list-inline small">
               <li className="list-inline-item me-3">
-                <Link to="/category/men's%20clothing" className="text-light">
+                <Link to="/category/men's-clothing" className="text-light">
                   Men's
                 </Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/category/women's%20clothing" className="text-light">
+                <Link to="/category/women's-clothing" className="text-light">
                   Women's
                 </Link>
               </li>
