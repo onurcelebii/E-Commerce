@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useCart } from "../context/CartContext";
 import { Link } from "react-router-dom";
-import { FaShoppingCart } from "react-icons/fa"; // Sepet ikonu
+import { FaShoppingCart } from "react-icons/fa";
 import CartItem from "../components/cart/CartItem";
 import CartSummary from "../components/cart/CartSummary";
 import CartModals from "../components/cart/CartModals";
-import "../styles/CartPage.css"; // CSS dosyasını import ettik
+import "../styles/CartPage.css";
 
 function CartPage() {
   const {

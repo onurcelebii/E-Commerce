@@ -10,7 +10,7 @@ import "../styles/HomePage.css";
 const HomePage = () => {
   const { products, loading } = useProducts();
   const { sortOption, setSortOption, sortProducts } = useSort();
-  const { addToCart } = useCart(); // `addToCart` fonksiyonunu useCart'dan alıyoruz
+  const { addToCart } = useCart();
 
   return (
     <div className="d-flex flex-column min-vh-100">
@@ -20,7 +20,6 @@ const HomePage = () => {
           <p>Welcome to the e-commerce site. Check out our products.</p>
         </div>
 
-        {/* Sıralama Dropdown */}
         <SortDropdown value={sortOption} onChange={setSortOption} />
 
         {loading ? (

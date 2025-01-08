@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "../../styles/CartItem.css"; // CSS dosyasını import ettik
+import "../../styles/CartItem.css";
 
 function CartItem({ item, increaseQuantity, decreaseQuantity, handleDelete }) {
   return (

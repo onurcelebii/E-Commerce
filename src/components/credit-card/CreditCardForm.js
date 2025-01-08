@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/CreditCardForm.css"; // Normal CSS dosyasını import ediyoruz
+import "../../styles/CreditCardForm.css";
 
 function CreditCardForm({
   cardholderName,

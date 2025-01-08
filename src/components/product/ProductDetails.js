@@ -8,7 +8,7 @@ const ProductDetails = ({ title, rating, description, price, onAddToCart }) => {
   const handleAddToCart = () => {
     onAddToCart();
     setShowMessage(true);
-    setTimeout(() => setShowMessage(false), 3000); // 3 saniye sonra mesaj kaybolacak
+    setTimeout(() => setShowMessage(false), 3000);
   };
 
   return (

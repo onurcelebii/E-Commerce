@@ -7,7 +7,6 @@ function Footer() {
     <footer className="footer bg-dark text-light">
       <div className="container py-4">
         <div className="row d-flex align-items-center justify-content-between">
-          {/* About Us */}
           <div className="col-md-3 mb-3">
             <h6 className="text-uppercase fw-bold">About Us</h6>
             <p className="small">
@@ -15,7 +14,6 @@ function Footer() {
             </p>
           </div>
 
-          {/* Categories */}
           <div className="col-md-3 mb-3">
             <h6 className="text-uppercase fw-bold">Categories</h6>
             <ul className="list-inline small">

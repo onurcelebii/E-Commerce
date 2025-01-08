@@ -1,4 +1,3 @@
-// src/components/navbar/Logo.js
 import React from "react";
 import logo from "../../assets/logo.png";
 import "../../styles/Navbar.css";

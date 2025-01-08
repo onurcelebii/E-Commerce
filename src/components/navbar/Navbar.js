@@ -48,7 +48,6 @@ const Navbar = () => {
         <CategoriesMenu />
       </div>
 
-      {/* Mobil için navbar */}
       <div className="navbar-container mobile-navbar">
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container-fluid">

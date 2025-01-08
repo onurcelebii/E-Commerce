@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../../styles/CartSummary.css";
 
 function CartSummary({ total, handleClearCart }) {
-  const formattedTotal = total.toFixed(2); // 2 ondalık basamağa yuvarlama
+  const formattedTotal = total.toFixed(2);
 
   return (
     <div className="cart-summary mt-4 p-4 border rounded-3 shadow-sm">

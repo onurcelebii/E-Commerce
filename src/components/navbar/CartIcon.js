@@ -19,8 +19,8 @@ const CartIcon = () => {
             totalItems > 0 ? "visible" : "invisible"
           }`}
           style={{
-            minWidth: "25px", // Sabit genişlik
-            height: "25px", // Sabit yükseklik
+            minWidth: "25px",
+            height: "25px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",

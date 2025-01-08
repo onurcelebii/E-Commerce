@@ -18,7 +18,6 @@ function CreditCardPreview({ cardholderName, cardNumber, expiryDate, cvv }) {
           className="d-flex flex-column justify-content-between"
           style={{ height: "250px" }}
         >
-          {/* Kredi Kartı Üst Kısmı */}
           <div className="d-flex justify-content-between">
             <div>
               <span style={{ fontSize: "18px", fontWeight: "bold" }}>VISA</span>
@@ -37,7 +36,6 @@ function CreditCardPreview({ cardholderName, cardNumber, expiryDate, cvv }) {
             </div>
           </div>
 
-          {/* Kredi Kartı Numarası */}
           <div
             style={{
               fontSize: "30px",
@@ -50,7 +48,6 @@ function CreditCardPreview({ cardholderName, cardNumber, expiryDate, cvv }) {
             <div>{cardNumber || "#### #### #### ####"}</div>
           </div>
 
-          {/* Son Kullanma Tarihi ve CVV */}
           <div className="d-flex justify-content-between mt-4">
             <div>
               <span style={{ fontSize: "12px" }}>Expires</span>
@@ -62,7 +59,6 @@ function CreditCardPreview({ cardholderName, cardNumber, expiryDate, cvv }) {
             </div>
           </div>
 
-          {/* Kart Sahibi Adı */}
           <div
             style={{
               fontSize: "16px",
@@ -74,7 +70,6 @@ function CreditCardPreview({ cardholderName, cardNumber, expiryDate, cvv }) {
           </div>
         </div>
 
-        {/* Kartın Alt Kısmı - Grafik */}
         <div
           style={{
             position: "absolute",
